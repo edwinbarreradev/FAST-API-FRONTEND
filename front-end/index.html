@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Películas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-film"></i> Peliculitas
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="#agregar"><i class="fas fa-plus-circle"></i> Agregar</a></li>
+            <li><a href="#lista"><i class="fas fa-list"></i> Lista</a></li>
+            <li><a href="/dash.html"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <!-- SLIDER / PATINADOR DE PELÍCULAS DESTACADAS -->
+    <section class="slider-container">
+        <h2><i class="fas fa-star"></i> Películas Destacadas</h2>
+        <div class="slider">
+            <div class="slide">
+                <h3>Inception</h3>
+                <p>2010 | Director: Christopher Nolan</p>
+            </div>
+            <div class="slide">
+                <h3>The Godfather</h3>
+                <p>1972 | Director: Francis Ford Coppola</p>
+            </div>
+            <div class="slide">
+                <h3>Parasite</h3>
+                <p>2019 | Director: Bong Joon-ho</p>
+            </div>
+            <div class="slide">
+                <h3>The Dark Knight</h3>
+                <p>2008 | Director: Christopher Nolan</p>
+            </div>
+            <div class="slide">
+                <h3>Schindler's List</h3>
+                <p>1993 | Director: Steven Spielberg</p>
+            </div>
+        </div>
+        <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section class="dashboard">
+        <div class="card">
+            <i class="fas fa-film"></i>
+            <h3>Total Películas</h3>
+            <p id="total-peliculas">0</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-user"></i>
+            <h3>Directores Únicos</h3>
+            <p id="total-directores">0</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>Último Año</h3>
+            <p id="ultimo-ano">-</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-chart-bar"></i>
+            <h3>Promedio Año</h3>
+            <p id="promedio-ano">-</p>
+        </div>
+    </section>
+
+    <!-- FORMULARIO Y LISTA (TU CÓDIGO ORIGINAL, SIN MODIFICAR) -->
+    <main class="main-content">
+        <h1 id="agregar">Gestión de Películas</h1>
+        <form action="formulario-pelicula" id="formulario-pelicula">
+            <input type="text" id="titulo" placeholder="Título" required>
+            <input type="text" id="director" placeholder="Director" required>
+            <input type="number" id="anio" placeholder="Año" required>
+            <input type="hidden" id="pelicula_id">
+            <button type="submit" id="bagreg">Agregar Película</button>
+        </form>
+
+        <h2 id="lista">Lista de Películas</h2>
+        <ul id="lista-peliculas"></ul>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

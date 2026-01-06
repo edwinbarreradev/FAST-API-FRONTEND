@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CineManager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-film"></i> CineManager
+        </div>
+        <ul class="nav-links">
+            <li><a href="./index.html"><i class="fas fa-arrow-left"></i> Volver</a></li>
+            <li><a href="#" class="active"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <!-- DASHBOARD -->
+    <section class="dashboard">
+        <div class="card">
+            <i class="fas fa-film"></i>
+            <h3>Total Películas</h3>
+            <p id="total-peliculas">0</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-user"></i>
+            <h3>Directores Únicos</h3>
+            <p id="total-directores">0</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>Último Año</h3>
+            <p id="ultimo-ano">-</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-chart-bar"></i>
+            <h3>Promedio Año</h3>
+            <p id="promedio-ano">-</p>
+        </div>
+    </section>
+
+    <!-- GRÁFICOS -->
+    <div class="charts-container">
+        <div class="chart-box">
+            <h3>Gráfico: Promedio de Año por Película</h3>
+            <canvas id="anioChart"></canvas>
+        </div>
+        <div class="chart-box">
+            <h3>Director con Más Películas</h3>
+            <canvas id="directorChart"></canvas>
+        </div>
+    </div>
+
+    <!-- TABLA DE PELÍCULAS -->
+    <div class="table-container">
+        <h3>Lista de Películas</h3>
+        <table id="tabla-peliculas">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Director</th>
+                    <th>Año</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="dash.js"></script>
+</body>
+</html>
